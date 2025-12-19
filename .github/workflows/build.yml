@@ -28,7 +28,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: builder
+    runs-on: ubuntu-latest
     timeout-minutes: 1440
     outputs:
       pushed: ${{ steps.push.outcome == 'success' }}
