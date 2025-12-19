@@ -12,7 +12,7 @@ NYX_ENV=('NIXPKGS_ALLOW_BROKEN=1')
 NYX_FLAGS="${NYX_FLAGS:---accept-flake-config --no-link}"
 NYX_WD="${NYX_WD:-$(mktemp -d)}"
 NYX_HOME="${NYX_HOME:-$HOME/.nyx}"
-CACHIX_REPO="${CACHIX_REPO:-chaotic-nyx}"
+CACHIX_REPO="${CACHIX_REPO:-mrn157}"
 
 # Colors
 R='\033[0;31m'
