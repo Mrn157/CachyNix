@@ -1,0 +1,6 @@
+/.env
+/.idea
+/.nixos-test-history
+/result
+/result-*
+/maintenance/flake.lock
