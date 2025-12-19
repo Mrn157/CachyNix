@@ -13,7 +13,6 @@
   nixpkgs ? flakes.nixpkgs,
   self ? flakes.self,
   selfOverlay ? self.overlays.default,
-  jovian ? flakes.jovian,
   rust-overlay ? flakes.rust-overlay,
   nixpkgsExtraConfig ? { },
 }:
@@ -103,28 +102,9 @@ let
   # Required for kernel packages
   inherit (final.stdenv) isLinux;
 
-  # Apply Jovian overlay only on x86_64-linux
-  jovian-chaotic =
-    if final.stdenv.hostPlatform.isLinux && final.stdenv.hostPlatform.isx86_64 then
-      let
-        base = nyxUtils.applyOverlay {
-          overlay = jovian.overlays.default;
-          replace = true;
-          pkgs = prev;
-        };
-      in
-      (builtins.removeAttrs base [ "jovian-documentation" ])
-      // {
-        recurseForDerivations = true;
-        linuxPackages_jovian = base.linuxPackages_jovian // {
-          recurseForDerivations = false;
-        };
-      }
-    else
-      { };
 in
 {
-  inherit nyxUtils jovian-chaotic rustc_latest;
+  inherit nyxUtils rustc_latest;
 
   linux_cachyos = drvDropUpdateScript cachyosPackages.cachyos-gcc.kernel;
   linux_cachyos-lto = drvDropUpdateScript cachyosPackages.cachyos-lto.kernel;
