@@ -65,10 +65,10 @@ writeShellScriptBin "chaotic-nyx-bumper" ''
   }
 
   function default-phases () {
-  # checkout
+    checkout
     bump-packages
     bump-flake
-  # push
+    push
     create-pr
   }
 
