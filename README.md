@@ -11,7 +11,7 @@ Testing, will update when I have time
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    chaotic.url = "github:Mrn157/CachyNix"; # IMPORTANT
+    cachynix.url = "github:Mrn157/CachyNix"; # IMPORTANT
   };
 
   outputs = { nixpkgs, chaotic, ... }: {
@@ -20,7 +20,7 @@ Testing, will update when I have time
         system = "x86_64-linux";
         modules = [
           ./configuration.nix
-          chaotic.nixosModules.default # IMPORTANT
+          cachynix.nixosModules.default # IMPORTANT
         ];
       };
     };
@@ -50,7 +50,7 @@ boot = {
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    chaotic.url = "github:Mrn157/CachyNix"; # IMPORTANT
+    cachynix.url = "github:Mrn157/CachyNix"; # IMPORTANT
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -65,7 +65,7 @@ boot = {
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         modules = [
           ./home-manager/default.nix
-          chaotic.homeManagerModules.default # IMPORTANT
+          cachynix.homeManagerModules.default # IMPORTANT
         ];
       };
     };
@@ -76,7 +76,7 @@ boot = {
 <h3>CachyOS kernels</h3>
 
 
-<p>Expect no cache from all </p>
+<p>Cache MIGHT be available for latest x86_64 (not v2, v3, or v4) </p>
 
 <p>You may install the CachyOS kernel directly using the default modules and overlays with <code>pkgs.linuxPackages_cachyos</code>. Alternatively, use <code>chaotic.legacyPackages.x86_64-linux.linuxPackages_cachyos</code> if you would like to use the package directly without using modules and overlay</p>
 
