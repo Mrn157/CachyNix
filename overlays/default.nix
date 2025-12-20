@@ -115,7 +115,6 @@ in
   linux_cachyos-rc = cachyosPackages.cachyos-rc.kernel;
   linux_cachyos-lts = cachyosPackages.cachyos-lts.kernel;
 
-  linuxPackages_cachyos = cachyosPackages.cachyos-gcc;
   linuxPackages_cachyos-lto = cachyosPackages.cachyos-lto;
   linuxPackages_cachyos-lto-znver4 = cachyosPackages.cachyos-lto-znver4;
   linuxPackages_cachyos-gcc = cachyosPackages.cachyos-gcc;
@@ -123,6 +122,15 @@ in
   linuxPackages_cachyos-hardened = cachyosPackages.cachyos-hardened;
   linuxPackages_cachyos-rc = cachyosPackages.cachyos-rc;
   linuxPackages_cachyos-lts = cachyosPackages.cachyos-lts;
+
+  linuxPackages_cachyos = cachyosPackages.cachyos-gcc // {
+    kernel = cachyosPackages.cachyos-gcc.kernel.overrideAttrs (_: {
+      argsOverride = {
+        mArch = "GENERIC_V3";
+      };
+    });
+  };
+
 
   zfs_cachyos = cachyosPackages.zfs;
 }
