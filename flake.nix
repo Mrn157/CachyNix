@@ -80,7 +80,7 @@
       };
     in
     builtins.foldl' eachSystem universals [
-      "x86_64-v3-linux"
+      "x86_64-linux"
       "aarch64-linux"
       "aarch64-darwin"
     ];
