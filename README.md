@@ -76,7 +76,7 @@ boot = {
 <h3>CachyOS kernels</h3>
 
 
-<p>Cache MIGHT be available for latest x86_64 (not v2, v3, or v4) </p>
+<p>Cache MIGHT be available for latest regular x86_64 kernel (not v2, v3, or v4) </p>
 
 <p>You may install the CachyOS kernel directly using the default modules and overlays with <code>pkgs.linuxPackages_cachyos</code>. Alternatively, use <code>chaotic.legacyPackages.x86_64-linux.linuxPackages_cachyos</code> if you would like to use the package directly without using modules and overlay</p>
 
