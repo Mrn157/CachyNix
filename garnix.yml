@@ -1,4 +1,6 @@
 builds:
   include:
-    - "packages.x86_64-linux.linux_cachyos-lto"
-  exclude: []
+    - "=packages.x86_64-linux.linux_cachyos-lto"
+    # - "packages.x86_64-linux.linux_cachyos-gcc"
+  exclude:
+    - "packages.*"
