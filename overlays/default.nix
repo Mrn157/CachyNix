@@ -123,14 +123,5 @@ in
   linuxPackages_cachyos-rc = cachyosPackages.cachyos-rc;
   linuxPackages_cachyos-lts = cachyosPackages.cachyos-lts;
 
-  linuxPackages_cachyos-lto-v3 = cachyosPackages.cachyos-lto // {
-    kernel = cachyosPackages.cachyos-lto.kernel.overrideAttrs (_: {
-      argsOverride = {
-        mArch = "GENERIC_V3";
-      };
-    });
-  };
-
-
   zfs_cachyos = cachyosPackages.zfs;
 }
