@@ -75,13 +75,13 @@ boot = {
 
 <h3>CachyOS kernels</h3>
 
-Cache Status (6.18.2):
+Cache Status:
 
-| Package | Status |
-|--------|--------|
-| pkgs.linuxPackages_cachyos | ✔️ |
-| pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "GENERIC_V3"; } | ✔️ |
-| Others | ❌ |
+| Package | Status | Version |
+|--------|--------|--------|
+| pkgs.linuxPackages_cachyos | ✔️ | 6.18.2 |
+| [pkgs.linuxPackages_cachyos-lto.cachyOverride { mArch = "GENERIC_V3"; }](https://github.com/Mrn157/nix-dotfiles/blob/4304c7fd94f687825d2a3f13082cb68b81b3dec6/hosts/hp/configuration.nix#L14C2-L21C8) | ✔️ | 6.18.2 |
+| Others | ❌ | # |
 
 
 <p>You may install the CachyOS kernel directly using the default modules and overlays with <code>pkgs.linuxPackages_cachyos</code>. Alternatively, use <code>chaotic.legacyPackages.x86_64-linux.linuxPackages_cachyos</code> if you would like to use the package directly without using modules and overlay</p>
