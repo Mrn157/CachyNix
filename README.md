@@ -4,21 +4,26 @@ Testing, will update when I have time
 
 <h3>CachyOS kernels</h3>
 
-Cache Status:
+Cache Status (extraModulePackages modules may not be cached):
 
-| Package | Status | Version |
-|--------|--------|--------|
-| [My own](https://github.com/Mrn157/nix-dotfiles/blob/4304c7fd94f687825d2a3f13082cb68b81b3dec6/hosts/hp/configuration.nix#L14C2-L21C8) | ✔️ | 6.18.2 |
-| pkgs.linuxPackages_cachyos-gcc | ✔️ | 6.18.2 |
+| Package | Status | Version | Architecture |
+|--------|--------|--------| -------- |
+| [pkgs.linuxPackages_cachyos-lto GENERIC_V3](https://github.com/Mrn157/nix-dotfiles/blob/4304c7fd94f687825d2a3f13082cb68b81b3dec6/hosts/hp/configuration.nix#L14C2-L21C8) | ✔️ | 6.18.2 | x86_64-v3 |
+| pkgs.linuxPackages_cachyos | ✔️ | 6.18.2 | x86_64 |
+| pkgs.linuxPackages_cachyos-gcc | ✔️ | 6.18.2 | x86_64 |
+| pkgs.linuxPackages_cachyos-rc | ✔️ | 6.19-rc1 | x86_64 |
+| pkgs.linuxPackages_cachyos-hardened | ✔️ | 6.17.13 | x86_64 |
+| pkgs.linuxPackages_cachyos-server | ✔️ | 6.18.2 | x86_64 |
 | Others | ❓ | # |
 
-Some might be cached on Garnix.
+Others might be cached on Garnix.
 
 You can use [Garnix](https://app.garnix.io/) to build and cache a custom kernel (So you don't have to compile it on your own machine).
 Simply give it access to a repo (like your dotfiles) that exposes your custom kernel configuration as a derivation.
 Push a commit, and Garnix will build and cache it automatically.
 [This is my own](https://github.com/Mrn157/nix-dotfiles/blob/4304c7fd94f687825d2a3f13082cb68b81b3dec6/hosts/hp/configuration.nix#L14C2-L21C8)
 
+`linuxPackages_cachyos{,-hardened,-lto,-rc,-server}`
 
 <p>You may install the CachyOS kernel directly using the default modules and overlays with <code>pkgs.linuxPackages_cachyos</code>. Alternatively, use <code>chaotic.legacyPackages.x86_64-linux.linuxPackages_cachyos</code> if you would like to use the package directly without using modules and overlay</p>
 
