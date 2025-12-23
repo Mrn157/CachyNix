@@ -9,6 +9,7 @@ Cache Status:
 | Package | Status | Version |
 |--------|--------|--------|
 | [My own](https://github.com/Mrn157/nix-dotfiles/blob/4304c7fd94f687825d2a3f13082cb68b81b3dec6/hosts/hp/configuration.nix#L14C2-L21C8) | ✔️ | 6.18.2 |
+| pkgs.linuxPackages_cachyos-gcc | ✔️ | 6.18.2 |
 | Others | ❓ | # |
 
 Some might be cached on Garnix.
