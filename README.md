@@ -13,7 +13,7 @@ Cache Status (extraModulePackages modules may not be cached):
 | pkgs.linuxPackages_cachyos | ✔️ | 6.18.2 | x86_64 |
 | pkgs.linuxPackages_cachyos-gcc | ✔️ | 6.18.2 | x86_64 |
 | pkgs.linuxPackages_cachyos-server | ✔️ | 6.18.2 | x86_64 |
-| pkgs.linuxPackages_cachyos-rc | ❌ | 6.19-rc2 | x86_64 |
+| pkgs.linuxPackages_cachyos-rc | ✔️ | 6.19-rc2 | x86_64 |
 | pkgs.linuxPackages_cachyos-hardened | ✔️ | 6.17.13 | x86_64 |
 | Others | ❓ | # |
 
