@@ -22,8 +22,8 @@ Other kernels might be cached on Garnix by other people.
 
 You can use [Garnix](https://app.garnix.io/) to build and cache a custom kernel (So you don't have to compile it on your own machine).
 Simply give it access to a repo (like your dotfiles) that exposes your custom kernel configuration as a derivation.
-Push a commit, and Garnix will build and cache it automatically.
-[This is my own](https://github.com/Mrn157/nix-dotfiles/blob/4304c7fd94f687825d2a3f13082cb68b81b3dec6/hosts/hp/configuration.nix#L14C2-L21C8)
+Push a commit, and Garnix will build and cache it automatically. After it finishes building, it might take some time to getcached though.
+[I use this when I want to cache kernels](https://github.com/Mrn157/CachyNixBuilder)
 
 `linuxPackages_cachyos{,-hardened,-lto,-rc,-server}`
 
@@ -39,6 +39,8 @@ Push a commit, and Garnix will build and cache it automatically.
 </code></pre>
 
 <p>Use either <code>GENERIC_V2</code>, <code>GENERIC_V3</code>, <code>GENERIC_V4</code>, or <code>ZEN4</code>.
+
+<h3 id="on-flakes">Installing using flakes</h3>
 
 <p>We recommend integrating this repo using Flakes:</p>
 
@@ -110,4 +112,6 @@ boot = {
   };
 }
 </code></pre>
+
+
 
