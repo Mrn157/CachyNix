@@ -8,17 +8,17 @@ Cache Status (extraModulePackages modules may not be cached):
 
 | Package | Status | Version | Architecture |
 |--------|--------|--------| -------- |
-| [pkgs.linuxPackages_cachyos-lto](https://github.com/Mrn157/nix-dotfiles/blob/4304c7fd94f687825d2a3f13082cb68b81b3dec6/hosts/hp/configuration.nix#L14C2-L21C8) | ✔️ | 6.18.2 | x86_64-v3 |
-| pkgs.linuxPackages_cachyos-lto | ✔️ | 6.18.2 | x86_64 |
-| pkgs.linuxPackages_cachyos | ✔️ | 6.18.2 | x86_64 |
-| pkgs.linuxPackages_cachyos-gcc | ✔️ | 6.18.2 | x86_64 |
-| pkgs.linuxPackages_cachyos-server | ✔️ | 6.18.2 | x86_64 |
+| [pkgs.linuxPackages_cachyos-lto](https://github.com/Mrn157/nix-dotfiles/blob/4304c7fd94f687825d2a3f13082cb68b81b3dec6/hosts/hp/configuration.nix#L14C2-L21C8) | ✔️ | 6.18.3 | x86_64-v3 |
+| pkgs.linuxPackages_cachyos-lto | ❌ | 6.18.3  | x86_64 |
+| pkgs.linuxPackages_cachyos | ❌ | 6.18.3 | x86_64 |
+| pkgs.linuxPackages_cachyos-gcc | ⏳ | 6.18.3 | x86_64 |
+| pkgs.linuxPackages_cachyos-server | ❌ | 6.18.3 | x86_64 |
 | pkgs.linuxPackages_cachyos-rc | ✔️ | 6.19-rc3 | x86_64 |
-| pkgs.linuxPackages_cachyos-hardened | ✔️ | 6.17.13 | x86_64 |
+| pkgs.linuxPackages_cachyos-hardened | ❌ | 6.17.13 | x86_64 |
 | Others | ❓ | # |
 
 GCC kernel might have the most cached modules
-Other kernels might be cached on Garnix by other people.
+The/Other kernels might be cached on Garnix by other people.
 
 You can use [Garnix](https://app.garnix.io/) to build and cache a custom kernel (So you don't have to compile it on your own machine).
 Simply give it access to a repo (like your dotfiles) that exposes your custom kernel configuration as a derivation.
