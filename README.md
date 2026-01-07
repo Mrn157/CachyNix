@@ -12,7 +12,7 @@ Cache Status (extraModulePackages modules may not be cached):
 | pkgs.linuxPackages_cachyos-lto | ✔️ | 6.18.3  | x86_64 |
 | pkgs.linuxPackages_cachyos-gcc | ✔️ | 6.18.3 | x86_64 |
 | pkgs.linuxPackages_cachyos-server | ❌ | 6.18.3 | x86_64 |
-| pkgs.linuxPackages_cachyos-rc | ✔️ | 6.19-rc3 | x86_64 |
+| pkgs.linuxPackages_cachyos-rc | ✔️/⏳ | 6.19-rc4 | x86_64 |
 | pkgs.linuxPackages_cachyos-hardened | ❌ | 6.17.13 | x86_64 |
 | Others | ❓ | # |
 
@@ -22,9 +22,9 @@ The/Other kernels might be cached on Garnix by other people.
 You can use [Garnix](https://app.garnix.io/) to build and cache a custom kernel (So you don't have to compile it on your own machine).
 Simply give it access to a repo (like your dotfiles) that exposes your custom kernel configuration as a derivation.
 Push a commit, and Garnix will build and cache it automatically. After it finishes building, it might take some time to getcached though.
-[I use this when I want to cache kernels](https://github.com/Mrn157/CachyNixBuilder)
+[!](https://github.com/Mrn157/CachyNixBuilder)
 
-`linuxPackages_cachyos{,-hardened,-lto,-rc,-server}`
+`linuxPackages_cachyos{,-hardened,-lto,-gcc,-rc,-server}`
 
 <p>You may install the CachyOS kernel directly using the default modules and overlays with <code>pkgs.linuxPackages_cachyos</code>. Alternatively, use <code>chaotic.legacyPackages.x86_64-linux.linuxPackages_cachyos</code> if you would like to use the package directly without using modules and overlay</p>
 
