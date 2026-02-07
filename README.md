@@ -6,9 +6,9 @@ Testing, will update when I have time
 
 Cache Status (extraModulePackages modules may not be cached):
 
-✔️ = Cached/In Progress
-❌ = Not Cached/Unknown
-⚠️ I may make a mistake and make the status table incorrect
+<br>✔️ = Cached/In Progress
+<br>❌ = Not Cached/Unknown
+<br>⚠️ I may make a mistake and make the status table incorrec
 
 | Package | Status | Version | Architecture |
 |--------|--------|--------| -------- |
@@ -23,8 +23,10 @@ Cache Status (extraModulePackages modules may not be cached):
 GCC kernel might have the most cached modules. Some kernels might be cached on Garnix by other people.
 
 You can use [Garnix](https://app.garnix.io/) to build and cache a custom kernel (So you don't have to compile it on your own machine).
+<br>
 Simply give it access to a repo (like your dotfiles) that exposes your custom kernel configuration as a derivation.
 Push a commit, and Garnix will build and cache it automatically. After it finishes building, it might take some time to getcached though.
+<br>
 [!](https://github.com/Mrn157/CachyNixBuilder)
 
 `linuxPackages_cachyos{,-hardened,-lto,-gcc,-rc,-server,lts}`
