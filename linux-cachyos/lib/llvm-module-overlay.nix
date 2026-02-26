@@ -54,7 +54,6 @@ with prevModules;
       latest = fixNoVideo latest;
       legacy_535 = fixNoVideo legacy_535;
       dc_535 = markBroken dc_535;
-      dc_565 = markBroken dc_565;
       legacy_470 = markBroken legacy_470;
     }
   );
