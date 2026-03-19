@@ -1,4 +1,5 @@
-Testing, will update when I have time
+> [!IMPORTANT]
+> Use https://github.com/xddxdd/nix-cachyos-kernel instead.
 
 <h1>CachyNix</h1>
 
