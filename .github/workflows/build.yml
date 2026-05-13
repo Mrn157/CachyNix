@@ -43,7 +43,7 @@ jobs:
         id: check
         if: github.event_name == 'push'
         continue-on-error: true
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             try {
@@ -145,7 +145,7 @@ jobs:
           git push origin HEAD:main --force
       - name: Comment on commit
         if: (success() && steps.check.outputs.cached != 'true')
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             if (process.env.FAILED_BUILDS_COUNT > 0) {
